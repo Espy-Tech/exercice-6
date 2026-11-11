@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор стоимости услуги</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="my.js" defer></script>
+</head>
+<body>
+  <main class="calculator">
+    <p class="eyebrow">Практическая работа 6</p>
+    <h1>Калькулятор услуги</h1>
+    <p class="intro">Стоимость пересчитывается автоматически при каждом изменении.</p>
+
+    <form id="service-form">
+      <label class="field" for="quantity">Количество</label>
+      <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required>
+      <p class="error" id="quantity-error" role="alert" hidden>Введите целое положительное количество.</p>
+
+      <fieldset>
+        <legend>Тип услуги</legend>
+        <label class="choice"><input type="radio" name="serviceType" value="basic" checked> Базовая — 100 ₽ за единицу</label>
+        <label class="choice"><input type="radio" name="serviceType" value="extended"> Расширенная — 200 ₽ за единицу</label>
+        <label class="choice"><input type="radio" name="serviceType" value="premium"> Премиум — 300 ₽ за единицу</label>
+      </fieldset>
+
+      <div id="option-group" class="extra" hidden>
+        <label class="field" for="option">Опция расширенной услуги</label>
+        <select id="option" name="option">
+          <option value="0">Стандартная — без доплаты</option>
+          <option value="50">Приоритетная — +50 ₽ за единицу</option>
+          <option value="100">Срочная — +100 ₽ за единицу</option>
+        </select>
+      </div>
+
+      <div id="property-group" class="extra" hidden>
+        <label class="choice property-choice"><input id="property" name="property" type="checkbox" value="75"> Дополнительное обслуживание — +75 ₽ за единицу</label>
+      </div>
+    </form>
+
+    <output class="result" id="price" aria-live="polite">Итого: 100 ₽</output>
+  </main>
+</body>
+</html>

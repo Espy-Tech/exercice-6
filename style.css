@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; color: #263d37; background: #f2f6f3; font: 16px/1.5 Arial, sans-serif; }
+.calculator { width: min(100%, 620px); padding: clamp(22px, 5vw, 40px); border: 1px solid #d5e2db; border-radius: 18px; background: #fff; box-shadow: 0 12px 40px #183a3412; }
+.eyebrow { margin: 0 0 8px; color: #39735e; font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.15; }
+.intro { margin: 12px 0 24px; color: #62736d; }
+.field { display: block; margin: 12px 0 6px; font-weight: 700; }
+input[type="number"], select { width: 100%; min-height: 44px; padding: 9px 11px; border: 1px solid #bdcec4; border-radius: 8px; background: #fff; color: inherit; font: inherit; }
+fieldset { margin: 18px 0; padding: 14px; border: 1px solid #bdcec4; border-radius: 10px; }
+legend { padding: 0 6px; font-weight: 700; }
+.choice { display: flex; align-items: flex-start; gap: 9px; margin: 10px 0; }
+.choice input { margin-top: 5px; accent-color: #176b55; }
+.property-choice { padding: 12px; border-radius: 8px; background: #edf4ef; }
+.extra[hidden] { display: none; }
+.error { margin: 6px 0; color: #a52c32; font-size: .9rem; }
+.result { display: block; margin-top: 22px; padding: 16px; border-radius: 8px; background: #edf4ef; color: #183a34; font-size: 1.2rem; font-weight: 700; }
